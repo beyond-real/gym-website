@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "MadimiOne";
+  src: url("fonts/Madimi_One/MadimiOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Anta";
+  src: url("fonts/Anta/Anta-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LilitaOne";
+  src: url("fonts/Lilita_One/LilitaOne-Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --color-one: #7c3f00;
+  --color-two: #633200;
+  --color-three: #562b00;
+  --color-four: #492201;
+  --color-five: #3e1c00;
+  --background-color: #fdeedc;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* border all */
+.founder,
+.team,
+.facilities,
+.community,
+.faqs {
+  border-bottom: 5px double var(--color-one);
+  padding-top: 3rem;
+}
+
+/* founder and community */
+
+.founder,
+.community {
+  min-width: 100%;
+  margin-block: 1rem 0;
+}
+.founderChild,
+.comm {
+  padding-top: 0.5rem;
+  border-top: 2px solid var(--color-one);
+}
+.founderImage,
+.commImage {
+  width: 100%;
+}
+.founderInfo,
+.communityInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 2rem;
+  gap: 1rem;
+}
+.founderContainer h3,
+.communityContainer h3 {
+  font-size: 1.5rem;
+  text-decoration: underline 3px var(--color-one);
+}
+.foundername {
+  color: var(--color-three);
+  text-decoration: 2px underline var(--color-one);
+  font-size: 1.3rem;
+}
+
+/* FAQs */
+
+.FAQs{
+    padding: 2rem;
+}
+.FAQs dl{
+    padding-bottom: 1rem;
+}
+.FAQs dt{
+    font-size: 1.3rem;
+    text-decoration: underline 3px var(--color-one);
+    color: var(--color-four);
+    margin-bottom: 1rem;
+}
+@media only screen and (min-width: 1000px) {
+  /* border all */
+  .founder,
+  .team,
+  .facilities,
+  .community {
+    border-bottom: none;
+    padding-top: 3rem;
+  }
+
+  /* founder */
+
+  .founderContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .founderImage {
+    border-radius: 0 0 10px 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+    /* community */
+  
+    .communityContainer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+    .commImage {
+      border-radius: 0 0 10px 10px;
+    }
+  }

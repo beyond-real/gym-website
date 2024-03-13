@@ -1,0 +1,241 @@
+@font-face {
+  font-family: "MadimiOne";
+  src: url("fonts/Madimi_One/MadimiOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Anta";
+  src: url("fonts/Anta/Anta-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LilitaOne";
+  src: url("fonts/Lilita_One/LilitaOne-Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --color-one: #7c3f00;
+  --color-two: #633200;
+  --color-three: #562b00;
+  --color-four: #492201;
+  --color-five: #3e1c00;
+  --background-color: #fdeedc;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+/* all */
+.cool p,
+.mainContainer .description {
+  font-family: "MadimiOne", sans-serif;
+  color: var(--color-two);
+}
+.landingPageClasses h2,
+.mainContainer h2 {
+  font-family: "Anta", sans-serif;
+  color: var(--color-two);
+}
+
+/* landing page */
+.landingPageClasses {
+  min-height: 80vh;
+  width: 100%;
+}
+.classLandingImage {
+  border-radius: 0 0 10px 10px;
+}
+.landingPageClasses h2 {
+  font-size: 2.2rem;
+  padding: 1rem 0 0 1rem;
+}
+.cool {
+  padding-top: 2rem;
+}
+.cool p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.landingPageClasses h2,
+.cool p {
+  color: var(--color-two);
+  font-weight: 600;
+}
+.arrowSpan {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.arrow {
+  width: 100px;
+}
+
+/* main container */
+.mainContainer{
+    width: 100%;
+}
+.classesInfo > :not(.classPrice) {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+.child h2 {
+  font-size: 2rem;
+}
+.child p {
+  font-size: 1.2rem;
+}
+.classImages {
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+/* pricing containers */
+.classPrice {
+  font-family: "LilitaOne";
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  padding-block: 2rem;
+}
+.classPrice span {
+  border: 5px dotted var(--color-one);
+  padding: 1rem 2rem 1rem 0.5rem;
+}
+.classPrice h3 {
+  border-bottom: 1px solid black;
+  font-size: 1rem;
+}
+.classPrice h3,
+.classPrice p,
+.priceButton {
+  margin-bottom: 1rem;
+}
+.classPrice p {
+  font-size: 1.5rem;
+}
+.classPrice p sup {
+  font-size: 1rem;
+}
+.priceButton {
+  background-color: transparent;
+  border: 2px solid;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "LilitaOne";
+  transition: all ease-in-out 0.5s;
+
+  &:hover {
+    background-color: var(--color-five);
+    color: white;
+    border: 2px solid;
+  }
+}
+/* table styling */
+.classesTimetable{
+  padding: 2rem .2rem;
+}
+table {
+  width: 100%;
+  border: solid 2px var(--color-three);
+  border-collapse:1px collapse;
+}
+th, td {
+  text-align: left;
+}
+td{
+  font-family: "MadimiOne", sans-serif;
+  border: 1px solid var(--color-three);
+  background-color: var(--color-three);
+  color: whitesmoke;
+}
+th{
+  font-family: "Anta", sans-serif;
+  border: 1px solid var(--color-two);
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+
+
+
+@media only screen and (min-width: 500px) {
+  .classesInfo {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  .classPrice h3 {
+    font-size: 2rem;
+  }
+  .classPrice p {
+    font-size: 1.5rem;
+  }
+  /* timetable */
+  .classesTimetable{
+    padding: 2rem 1rem;
+  }
+  th, td {
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* landing page */
+  .landingPageClasses {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+  }
+  .classLandingImage {
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+  }
+  .landingPageClasses h2 {
+    padding-inline: 3rem;
+  }
+
+  /* main container */
+  .mainContainer .child {
+    margin-top: 2rem;
+    justify-content: space-between;
+  }
+  .mainContainer .right {
+    display: flex;
+  }
+  .mainContainer .left {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .mainContainer .left .classImages {
+    width: 50%;
+    border-radius: 10px 0 0 10px;
+  }
+  .mainContainer .right .classImages {
+    width: 50%;
+    border-radius: 0 10px 10px 0;
+  }
+  .classPrice h3 {
+    font-size: 2.5rem;
+  }
+  .classPrice p {
+    font-size: 2rem;
+  }
+
+  /* timetable */
+  .classesTimetable{
+    padding: 2rem;
+  }
+  th{
+    font-size: 1.5rem;
+  }
+  td{
+   font-size: 1.2rem ;
+  }
+}
