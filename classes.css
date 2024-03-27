@@ -27,7 +27,9 @@ body {
   width: 100%;
   min-height: 100vh;
 }
+
 /* all */
+
 .cool p,
 .mainContainer .description {
   font-family: "MadimiOne", sans-serif;
@@ -40,6 +42,7 @@ body {
 }
 
 /* landing page */
+
 .landingPageClasses {
   min-height: 80vh;
   width: 100%;
@@ -75,6 +78,7 @@ body {
 }
 
 /* main container */
+
 .mainContainer{
     width: 100%;
 }
@@ -92,7 +96,9 @@ body {
   width: 100%;
   border-radius: 0 0 10px 10px;
 }
+
 /* pricing containers */
+
 .classPrice {
   font-family: "LilitaOne";
   width: 100%;
@@ -103,7 +109,7 @@ body {
 }
 .classPrice span {
   border: 5px dotted var(--color-one);
-  padding: 1rem 2rem 1rem 0.5rem;
+  padding: 0.5rem;
 }
 .classPrice h3 {
   border-bottom: 1px solid black;
@@ -135,9 +141,15 @@ body {
     border: 2px solid;
   }
 }
+
 /* table styling */
+
 .classesTimetable{
-  padding: 2rem .2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 table {
   width: 100%;
@@ -152,21 +164,24 @@ td{
   border: 1px solid var(--color-three);
   background-color: var(--color-three);
   color: whitesmoke;
+  font-size: .8rem;
 }
 th{
   font-family: "Anta", sans-serif;
   border: 1px solid var(--color-two);
   background-color: transparent;
-  font-size: 1rem;
+  font-size: .9rem;
 }
 
-
-
+/* media query */
 
 @media only screen and (min-width: 500px) {
   .classesInfo {
     width: 100%;
     padding: 1rem 2rem;
+  }
+  .classPrice span {
+    padding: 1rem 2rem 1rem 0.5rem;
   }
   .classPrice h3 {
     font-size: 2rem;
@@ -174,7 +189,9 @@ th{
   .classPrice p {
     font-size: 1.5rem;
   }
+ 
   /* timetable */
+
   .classesTimetable{
     padding: 2rem 1rem;
   }
@@ -182,8 +199,20 @@ th{
     padding: 1rem;
   }
 }
+
+@media only screen and (min-width: 700px){
+  td{
+    font-size: .9rem;
+  }
+  th{
+    font-size: 1rem;
+  }
+}
+
 @media only screen and (min-width: 1200px) {
+
   /* landing page */
+
   .landingPageClasses {
     min-height: 100vh;
     width: 100%;
@@ -202,6 +231,7 @@ th{
   }
 
   /* main container */
+
   .mainContainer .child {
     margin-top: 2rem;
     justify-content: space-between;
@@ -229,6 +259,7 @@ th{
   }
 
   /* timetable */
+  
   .classesTimetable{
     padding: 2rem;
   }

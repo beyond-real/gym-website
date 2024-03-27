@@ -29,6 +29,7 @@ body {
 }
 
 /* border all */
+
 .founder,
 .team,
 .facilities,
@@ -36,6 +37,13 @@ body {
 .faqs {
   border-bottom: 5px double var(--color-one);
   padding-top: 3rem;
+}
+
+/* hero */
+
+.heroParagraph {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 /* founder and community */
@@ -75,20 +83,28 @@ body {
 
 /* FAQs */
 
-.FAQs{
-    padding: 2rem;
+.FAQs {
+  padding: 2rem;
 }
-.FAQs dl{
-    padding-bottom: 1rem;
+.FAQs dl {
+  padding-bottom: 1rem;
 }
-.FAQs dt{
-    font-size: 1.3rem;
-    text-decoration: underline 3px var(--color-one);
-    color: var(--color-four);
-    margin-bottom: 1rem;
+.FAQs dt {
+  font-size: 1.3rem;
+  text-decoration: underline 3px var(--color-one);
+  color: var(--color-four);
+  margin-bottom: 1rem;
+  font-family: "Anta", sans-serif;
 }
+.FAQs dd{
+  font-family: "MadimiOne", sans-serif;
+}
+
+/* media queries */
+
 @media only screen and (min-width: 1000px) {
   /* border all */
+
   .founder,
   .team,
   .facilities,
@@ -108,17 +124,35 @@ body {
   .founderImage {
     border-radius: 0 0 10px 10px;
   }
+  /* FAQs */
+  .FAQs dl{
+    padding-bottom: 1.5rem;
+  }
+.FAQs dt {
+  font-size: 1.7rem;
+}
+.FAQs dd{
+  font-size: 1.3rem;
+}
 }
 @media only screen and (min-width: 1200px) {
-    /* community */
-  
-    .communityContainer {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      padding: 0.5rem;
-    }
-    .commImage {
-      border-radius: 0 0 10px 10px;
-    }
+  /* hero */
+
+  .heroParagraph {
+    font-size: 1.5rem;
   }
+  /* community */
+
+  .communityContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  .commImage {
+    border-radius: 0 0 10px 10px;
+  }
+  .communityInfo p{
+    font-size: 1.2rem;
+  }
+}

@@ -35,10 +35,10 @@ h4 {
 }
 p {
   font-family: "MadimiOne";
-  font-size: 1.2rem;
 }
 
 /* call to action button */
+
 .callToAction {
   width: 100%;
   display: flex;
@@ -77,9 +77,11 @@ p {
   align-items: center;
   padding: 1rem 2rem;
   gap: 1rem;
+  color: var(--color-one);
 }
 
 /* main container */
+
 .mainContainer {
   width: 100%;
 }
@@ -125,6 +127,7 @@ p {
 }
 
 /* food */
+
 .food {
   padding: 2rem 0;
 }
@@ -137,6 +140,9 @@ p {
 }
 
 /* membership */
+.gymVideo{
+  margin-bottom: 2rem;
+}
 .membershipInfo {
   display: flex;
   flex-direction: column;
@@ -144,7 +150,9 @@ p {
   gap: 0.5rem;
   color: green;
 }
+
 /* customer */
+
 .testimonials {
   width: 100%;
   padding: 1rem;
@@ -181,18 +189,23 @@ p {
 .customers h3 {
   margin-bottom: 0.5rem;
 }
+
+/* media queries */
+
 @media only screen and (min-width: 1000px) {
+
   /* call to action */
+
   .callToAction {
     padding-block: 4rem;
   }
- 
 
   /* all border */
+
   .benefits,
   .bootcamp,
   .membershipOptions {
-   border: none;
+    border: none;
   }
   .child {
     border: none;
@@ -200,14 +213,18 @@ p {
   .customers {
     border: none;
   }
+
   /* title */
+
   .Title h2,
   .Title h3 {
     font-size: 2rem;
     text-decoration: 5px underline var(--color-one);
     padding-bottom: 2rem;
   }
+
   /* landing page */
+
   .hero {
     min-height: 100vh;
     width: 100%;
@@ -225,6 +242,7 @@ p {
   }
 
   /* main container */
+
   .mainContainer .child {
     margin-top: 2rem;
     justify-content: space-between;
@@ -255,7 +273,9 @@ p {
   .moreInfo h3 {
     font-size: 2rem;
   }
+
   /* customers */
+
   .customers {
     display: flex;
     flex-direction: row;
@@ -272,7 +292,7 @@ p {
     padding: 2rem;
     width: 80%;
   }
-  .reviews h3{
+  .reviews h3 {
     font-size: 1.4rem;
     text-decoration: underline 2px var(--color-four);
     padding-bottom: 1.5rem;

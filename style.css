@@ -25,7 +25,9 @@ body {
   min-height: 100vh;
   background-color: var(--background-color);
 }
+
 /* navbars */
+
 .logo {
   cursor: pointer;
   width: 20px;
@@ -61,19 +63,20 @@ footer .socialIcons a {
 footer .socialIcons a:hover {
   background-color: var(--color-one);
 }
-.navBar ul li{
+
+/* nav bar */
+
+.navBar ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: all ease-in-out 1s;
   width: 100px;
-
 }
 .navBar ul li.active {
   .logoSpan {
     background-color: var(--color-one);
     margin-block: -30px 10px;
-
   }
   .logoLabel {
     display: block;
@@ -83,6 +86,7 @@ footer .socialIcons a:hover {
 }
 
 /* header */
+
 .header {
   position: sticky;
   top: 0;
@@ -118,28 +122,39 @@ footer .socialIcons a:hover {
 .logoNames {
   display: none;
 }
+
 /* footer */
-.footer1 {
-  display: grid;
-  place-content: center;
-  gap: 1rem;
-}
+
 footer {
   background-color: var(--color-five);
   padding-block: 4rem;
 }
-footer p {
+.footer1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+footer p,
+footer span {
   font-family: "MadimiOne", sans-serif;
-  color: white;
+  color: whitesmoke;
 }
 footer h3 {
   font-family: "Anta", sans-serif;
-  color: white;
+  color: whitesmoke;
   text-decoration: underline;
   padding-bottom: 0.5rem;
 }
+footer a {
+  color: red;
+  text-decoration: none;
+}
 .socialIcons {
   display: flex;
+  justify-content: center;
   gap: 0.5rem;
   padding-bottom: 1rem;
 }
@@ -147,8 +162,33 @@ footer h3 {
   display: flex;
   justify-content: center;
 }
+.contact-info p,
+.operating-hours p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info,
+.operating-hours {
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--color-one);
+}
+
+/* marquee */
+
+marquee {
+  background: linear-gradient(135deg, #ff9f00, #ff32e0);
+  color: var(--color-four); /* Off-white or light color */
+  font-family: "MadimiOne", sans-serif;
+  font-size: 1.2rem;
+  padding-block: 0.5rem;
+  position: fixed;
+}
+
+/* media queries */
 
 @media only screen and (min-width: 700px) {
+  /* navbar */
+
   .navBar,
   .header {
     display: none;
@@ -201,6 +241,9 @@ footer h3 {
       border: 2px solid var(--color-five);
     }
   }
+
+  /* footer */
+  
   footer {
     background-color: var(--color-five);
     padding-block: 2rem 0.5rem;
@@ -208,29 +251,38 @@ footer h3 {
 }
 @media only screen and (min-width: 800px) {
   .footer1 {
-    display: flex;
-    justify-content: space-evenly;
+    text-align: left;
+  }
+  footer h3 {
+    padding-bottom: 1rem;
+  }
+  .footer1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.3fr;
+    align-items: center;
+    padding-inline: 0.5rem;
+  }
+  .contact-info,
+  .operating-hours {
+    padding-bottom: 0;
+    border: none;
+    border-right: 3px solid var(--color-one);
   }
   .socialIcons {
     display: flex;
     flex-direction: column;
-  }
-  footer p {
-    padding-bottom: 1.5rem;
-  }
-  footer h3 {
-    padding-bottom: 1rem;
+    align-items: center;
+    gap: 1rem;
   }
 }
 @media only screen and (min-width: 1000px) {
   footer {
     margin-top: 2rem;
   }
-  .footer1 {
-    display: flex;
-    justify-content: space-evenly;
-  }
   footer p {
+    font-size: 1.5rem;
+  }
+  footer h3 {
     font-size: 1.5rem;
   }
 }

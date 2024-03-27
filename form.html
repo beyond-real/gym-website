@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JOIN US AT SWEATSQUAD</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+
+    <!-- nav bar -->
+    <!-- large screens -->
+
+    <nav class="logoNames">
+      <ul class="logoNames">
+        <span><p class="companyName">SWEATSQUAD</p></span>
+        <span class="two">
+          <li>
+            <a href="landing page.html"><button type="button">BACK</button></a>
+          </li>
+        </span>
+      </ul>
+    </nav>
+
+    <!-- small screen nav -->
+
+    <div class="header">
+      <span
+        ><a href="landing page.html"
+          ><p class="companyName">SWEATSQUAD</p></a
+        ></span
+      >
+      <span class="two">
+        <a href="landing page.html">
+          <button>BACK</button>
+        </a>
+      </span>
+    </div>
+
+    <!-- main content -->
+
+    <main class="formContainer">
+      <form action="" class="form" id="signup-form">
+        <label for="email" class="formMainLabel">Email Address</label>
+        <input
+          class="formMain"
+          id="email"
+          type="email"
+          placeholder="Name@gmail.com"
+          required
+        />
+
+        <label for="PhoneNumber" class="formMainLabel">Phone Number</label>
+        <input
+          id="PhoneNumber"
+          type="text"
+          class="formMain"
+          maxlength="10"
+          placeholder="0712345678"
+          required
+        />
+
+        <label for="firstName" class="formMainLabel">First Name</label>
+        <input
+          class="formMain"
+          id="firstName"
+          type="text"
+          placeholder="Ronald"
+          required
+        />
+
+        <label for="lastName" class="formMainLabel">Last Name</label>
+        <input
+          class="formMain"
+          id="lastName"
+          type="text"
+          placeholder="Ngala"
+          required
+        />
+
+        <div class="formExtra">
+          <span
+            ><label for="age">Age:</label>
+            <input type="number" id="age" class="formExtraChild age" required
+          /></span>
+
+          <span>
+            <label for="gender">Gender:</label>
+            <select name="" id="gender" class="formExtraChild gender" required>
+              <option value="">Select Gender</option>
+              <option value="">Male</option>
+              <option value="">Female</option>
+              <option value="">Rather not say</option>
+            </select>
+          </span>
+        </div>
+
+        <button type="submit" class="submmitButton">Submit</button>
+      </form>
+    </main>
+
+    <!-- popup -->
+
+    <dialog class="popup" id="popup">
+      <h1>Congratulations!</h1>
+      <h1>🎉</h1>
+      <p>💪 Welcome to the squad! 💪</p>
+      <p>We'll keep you updated</p>
+      <a href="form.html">
+        <button
+          type="button"
+          class="popupButton closePopup"
+          onclick="closePopup()"
+        >
+          Let's Go! 🚀
+        </button>
+      </a>
+    </dialog>
+
+    <!-- javascript -->
+
+    <script>
+      let popup = document.getElementById("popup");
+
+      document
+        .getElementById("signup-form")
+        .addEventListener("submit", function (event) {
+
+          // Prevent the default form submission
+
+          event.preventDefault();
+
+          // Show the popup
+          
+          showModal();
+        });
+
+      function showModal() {
+        popup.showModal();
+      }
+
+      function closePopup() {
+        popup.close();
+      }
+    </script>
+  </body>
+</html>
